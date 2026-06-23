@@ -507,7 +507,7 @@ class FormHelper extends \Cake\View\Helper\FormHelper
     /**
      * {@inheritDoc}
      */
-    protected function _getInput(string $fieldName, array $options)
+    protected function _getInput(string $fieldName, array $options): string|array
     {
         $label = $options['labelOptions'];
         switch (strtolower($options['type'])) {
