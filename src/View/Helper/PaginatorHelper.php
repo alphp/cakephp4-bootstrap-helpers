@@ -32,7 +32,7 @@ class PaginatorHelper extends \Cake\View\Helper\PaginatorHelper
      *
      * @var array
      */
-    public $helpers = [
+    public array $helpers = [
         'Url', 'Number', 'Html',
     ];
 

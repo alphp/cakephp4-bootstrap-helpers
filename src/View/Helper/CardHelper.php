@@ -34,7 +34,7 @@ class CardHelper extends Helper
      *
      * @var array
      */
-    public $helpers = [
+    public array $helpers = [
         'Html',
     ];
 
