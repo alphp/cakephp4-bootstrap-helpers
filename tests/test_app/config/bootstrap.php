@@ -11,4 +11,4 @@
 
 use Cake\Core\Plugin;
 
-Plugin::getCollection()->add(new \Bootstrap\Plugin());
+Plugin::getCollection()->add(new \Bootstrap\BootstrapPlugin());

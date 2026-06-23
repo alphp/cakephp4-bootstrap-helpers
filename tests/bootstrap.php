@@ -87,4 +87,4 @@ Cache::setConfig([
 
 Security::setSalt('testing');
 
-Plugin::getCollection()->add(new \Bootstrap\Plugin());
+Plugin::getCollection()->add(new \Bootstrap\BootstrapPlugin());
