@@ -151,8 +151,8 @@ aria-valuenow="{{width}}" aria-valuemin="{{min}}" aria-valuemax="{{max}}" style=
      *
      * @param string $icon Name of the icon.
      * @param array $options Array of options. See above.
-     * @param string $opcions['tag'] Tag use for the icon, "i" for default
-     * @param string $opcions['font'] Font of the icon:
+     * @param string $options['tag'] Tag use for the icon, "i" for default
+     * @param  $options['font'] Font of the icon:
      * - HtmlHelper::FONT_GLYPHICON        for default Twitter Bootstrap icon.
      * - HtmlHelper::FONT_AWESOME          for Font Awesome icon.
      * - HtmlHelper::FONT_AWESOME5_SOLID   for Font Awesome 5 Solid icon.
@@ -204,7 +204,7 @@ aria-valuenow="{{width}}" aria-valuemin="{{min}}" aria-valuemax="{{max}}" style=
      * {@inheritDoc}
      * @deprecated 4.0.0 Use the badge() instead.
      */
-    public function label($text, $type = null, $options = [])
+    public function label(string $text, $type = null, $options = [])
     {
         deprecationWarning('HtmlHelper::label is deprecated. Use HtmlHelper::badge instead.');
 
@@ -492,7 +492,7 @@ aria-valuenow="{{width}}" aria-valuemin="{{min}}" aria-valuemax="{{max}}" style=
                     if (isset($value['url'])) {
                         $url = $this->Url->build($value['url']);
                     } elseif (Matching::matchTag('a', $value['title'], $title, $attrs)) {
-                        $value += $attrs;
+                        $value += $attrs ?? [];
                         $url = $value['href'];
                         unset($value['href']);
                     } else {

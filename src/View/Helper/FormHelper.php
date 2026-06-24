@@ -191,7 +191,7 @@ class FormHelper extends \Cake\View\Helper\FormHelper
                     'inputColumnClass' => $this->_getColumnClass('input'),
                     'labelColumnClass' => $this->_getColumnClass('label'),
                 ];
-                if (!$that->getTemplates($data['templateName'])) {
+                if (!$that->getTemplate($data['templateName'])) {
                     $data['templateName'] = $name;
                 }
 
@@ -268,9 +268,9 @@ class FormHelper extends \Cake\View\Helper\FormHelper
      * form helper.
      *
      * @param array $columns Array of columns options to set
-     * @return array
+     * @return self $this
      */
-    public function setColumnSizes(array $columns): array
+    public function setColumnSizes(array $columns): self
     {
         return $this->setConfig('columns', $columns, false);
     }
@@ -345,7 +345,7 @@ class FormHelper extends \Cake\View\Helper\FormHelper
      * @return string A string containing the three elements concatenated an wrapped inside
      *                  an input group `<div>`.
      */
-    protected function _wrap(string $input, string $prepend, string $append): string
+    protected function _wrap(string $input, ?string $prepend, ?string $append): string
     {
         return $this->formatTemplate('inputGroup', [
             'inputGroupStart' => $this->formatTemplate('inputGroupStart', [

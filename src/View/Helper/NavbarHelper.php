@@ -95,14 +95,21 @@ aria-haspopup="true" aria-expanded="false">{{content}}</a>',
      *
      * @var bool
      */
-    protected $_responsive = false;
+    protected bool $_responsive = false;
+
+		/**
+     * Wrap the inner content inside a container. Default is `false`.
+     *
+     * @var bool
+     */
+    protected bool $_container = false;
 
     /**
      * Menu level (0 = out of menu, 1 = main horizontal menu, 2 = dropdown menu).
      *
      * @var int
      */
-    protected $_level = 0;
+    protected int $_level = 0;
 
     /**
      * Create a new navbar.
